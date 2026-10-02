@@ -1,0 +1,27 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+a{
+    text-decoration: none;
+}
+
+ul li:first-child{
+    color: white;
+    background-color: rgb(6, 39, 230);
+    font-weight: bold;
+}
+
+ul li:last-child{
+    color: white;
+    background-color: red;
+    font-weight: bold;
+}

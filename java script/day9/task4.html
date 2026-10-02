@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task 4</title>
+</head>
+<body>
+    
+
+
+    <script>
+        var globalVar = "Global";
+
+    function scopeExample() {
+    var functionVar = "Function";
+    let functionLet = "Function Let";
+    const functionConst = "Function Const";
+
+    console.log(globalVar);
+    console.log(functionVar);
+    console.log(functionLet);
+    console.log(functionConst);
+
+    if (true) {
+        var blockVar = "Var";
+        let blockLet = "Let";
+        const blockConst = "Const";
+
+        
+        console.log(blockVar);
+        console.log(blockLet);
+        console.log(blockConst);
+    }
+
+    console.log(blockVar); 
+}
+
+scopeExample();
+        
+    </script>
+</body>
+</html>

@@ -1,0 +1,103 @@
+  * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f4f7fb;
+            color: #333;
+        }
+
+        header {
+            background-color: #2563eb;
+            color: white;
+            text-align: center;
+            padding: 30px;
+        }
+
+        nav {
+            background-color: #1e40af;
+            text-align: center;
+            padding: 15px;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+        }
+
+        nav a:hover {
+            color: #facc15;
+        }
+
+        .hero {
+            text-align: center;
+            padding: 60px 20px;
+            background-color: white;
+        }
+
+        .hero h2 {
+            color: #2563eb;
+            font-size: 35px;
+            margin-bottom: 15px;
+        }
+
+        .section {
+            max-width: 1000px;
+            margin: 30px auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+
+        .section h2 {
+            color: #2563eb;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .skills {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        .skill {
+            background-color: #2563eb;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 8px;
+        }
+
+        .projects {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .project {
+            flex: 1;
+            min-width: 200px;
+            padding: 20px;
+            background-color: #eff6ff;
+            border-radius: 8px;
+        }
+
+        .project h3 {
+            color: #1e40af;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            background-color: #1e40af;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 30px;
+        }

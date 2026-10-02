@@ -1,0 +1,165 @@
+Varible names -Var
+
+
+1.var username
+2.var firstName
+3.var lastName
+4.var fullName
+5.var ageNumber
+6.var phoneNumber
+7.var emailId
+8.var homeCity
+9.var homeTown
+10.var schoolName
+11.var collegeName
+12.var courseName
+13.var className
+14.var teacherName
+15.var fatherName
+16.var motherName
+17.var brotherName
+18.var sisterName
+19.var userAge
+20.var userCity
+21.var userEmail
+22.var userPhone
+23.var userId
+24.var userCode
+25.var homeAddress
+26.var workAddress
+27.var jobName
+28.var jobRole
+29.var teamName
+30.var gameName
+31.var gameScore
+32.var totalMark
+33.var testMark
+34.var passMark
+35.var totalCount
+36.var itemCount
+37.var itemName
+38.var itemPrice
+39.var totalPrice
+40.var orderId
+41.var orderDate
+42.var birthDate
+43.var startDate
+44.var endDate
+45.var loginName
+46.var loginTime
+47.var userType
+48.var userStatus
+
+
+
+Let words
+
+
+1.let colorBlue
+2.let colorRed
+3.let colorGreen
+4.let colorBlack
+5.let colorWhite
+6.let colorYellow
+7.let colorPink
+8.let colorOrange
+9.let foodName
+10.let fruitName
+11.let foodPrice
+12.let foodCount
+13.let bookName
+14.let bookPrice
+15.let pageCount
+16.let pageNumber
+17.let markTotal
+18.let markScore
+19.let markGrade
+20.let testName
+21.let testScore
+22.let gameLevel
+23.let gamePoint
+24.let gameLife
+25.let playerName
+26.let playerScore
+27.let teamScore
+28.let teamPoint
+29.let carName
+30.let carModel
+31.let carPrice
+32.let bikeName
+33.let bikeModel
+34.let bikePrice
+35.let roomName
+36.let roomSize
+37.let roomNumber
+38.let doorNumber
+39.let houseNumber
+40.let streetName
+41.let cityName
+42.let stateName
+43.let countryName
+44.let dayName
+45.let monthName
+46.let yearNumber
+47.let currentTime
+48.let currentDate
+
+
+Const words
+
+
+
+1.const goodKitty
+2.const goodPuppy
+3.const bigDog
+4.const smallCat
+5.const redRose
+6.const blueSky
+7.const greenTree
+8.const whiteCloud
+9.const blackCar
+10.const redBike
+11.const hotTea
+12.const coldWater
+13.const freshMilk
+14.const sweetCake
+15.const bigHouse
+16.const smallRoom
+17.const newBook
+18.const oldBook
+19.const fastCar
+20.const slowBike
+21.const highScore
+22.const lowScore
+23.const maxMark
+24.const minMark
+25.const firstPlace
+26.const secondPlace
+27.const thirdPlace
+28.const bestFriend
+29.const goodFriend
+30.const newFriend
+31.const oldFriend
+32.const happyDay
+33.const goodDay
+34.const badDay
+35.const sunnyDay
+36.const rainyDay
+37.const schoolBus
+38.const cityBus
+39.const trainName
+40.const flightName
+41.const shopName
+42.const bankName
+43.const parkName
+44.const beachName
+45.const riverName
+46.const treeName
+47.const flowerName
+48.const starName
+
+
+
+
+
+

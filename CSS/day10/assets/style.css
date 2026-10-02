@@ -1,0 +1,44 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+a{
+    text-decoration: none;
+}
+
+.box1{
+    background-color: rgb(174, 238, 215);
+    color: black;
+    padding: 10px;
+    margin: 10px;
+    width: 270px;
+    height: 250px;
+    border-radius: 10px;
+
+   
+}
+
+.mark{
+    display: flex;
+    justify-content: center;
+    padding: 70px;
+}
+
+.box1:hover{
+            background-color: #2ecc71;
+            color: black;
+            transform: scale(1.5);
+}
+img{
+    width: 250px;
+    height: 200px;
+    
+}

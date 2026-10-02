@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Button Click Event</title>
+
+    <style>
+        .newColor {
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1 id="title">Original Title</h1>
+
+    <button onclick="changeTitle()">Click Me</button>
+
+    <script>
+        function changeTitle() {
+
+            
+            let title = document.getElementById("title");
+            title.textContent = "Title Changed!";
+
+            
+            title.style.color = "blue";
+
+            
+            title.classList.add("newColor");
+        }
+    </script>
+
+</body>
+</html>

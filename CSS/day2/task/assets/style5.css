@@ -1,0 +1,27 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    text-align: center;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+a{
+    text-decoration: none;
+}
+
+.hospital{
+    background-color: darkgray;
+    color: black;
+    text-align: center;
+}
+#title{
+    color: darkblue;
+    background-color: chartreuse;
+    text-align: center;
+}

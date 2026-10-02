@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task 6</title>
+</head>
+<body>
+
+
+    <script>
+        class Student {
+    constructor(name, age, mark) {
+        this.name = name;
+        this.age = age;
+        this.mark = mark;
+    }
+
+    displayDetails() {
+        console.log(this.name);
+        console.log(this.age);
+        console.log(this.mark);
+    }
+}
+
+const student1 = new Student("Ravi", 20, 85);
+const student2 = new Student("Arun", 21, 90);
+
+student1.displayDetails();
+
+student2.displayDetails();
+        
+    </script>
+    
+</body>
+</html>

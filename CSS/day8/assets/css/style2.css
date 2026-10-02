@@ -1,0 +1,28 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+a{
+    text-decoration: none;
+}
+input{
+    width:250px;
+    padding:10px;
+    margin:10px 0;
+    border:2px solid gray;
+    border-radius:10px;
+}
+
+input:focus{
+    border-color:blue;
+    background-color:lightyellow;
+    outline:none;
+}

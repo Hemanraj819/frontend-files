@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details</title>
+    <style>
+        body {
+            font-family: Arial;
+            padding: 30px;
+        }
+
+        input {
+            padding: 10px;
+            margin: 5px;
+        }
+
+        button {
+            padding: 10px 20px;
+            margin: 5px;
+            background-color: purple;
+            color: white;
+            border: none;
+        }
+
+        #productList {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .product {
+            width: 220px;
+            padding: 20px;
+            border: 1px solid gray;
+            border-radius: 10px;
+            box-shadow: 0 3px 8px #ccc;
+        }
+    </style>
+</head>
+<body>
+    <h2>Product Details</h2>
+
+    <input type="text" id="productName" placeholder="Product Name">
+    <input type="number" id="price" placeholder="Price">
+    <input type="text" id="category" placeholder="Category">
+
+    <button onclick="addProduct()">Add Product</button>
+
+    <div id="productList"></div>
+
+
+<script src="./asset/task3.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Show Hide Content</title>
+
+    <style>
+        .content {
+            display: none;
+        }
+
+        .content.show {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <p id="content" class="content">
+        This is a java script
+    </p>
+
+    <button onclick="toggleContent()">Show / Hide</button>
+
+    <script>
+        function toggleContent() {
+            let content = document.getElementById("content");
+
+            content.classList.toggle("show");
+        }
+    </script>
+
+</body>
+</html>

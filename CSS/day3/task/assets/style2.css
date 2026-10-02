@@ -1,0 +1,38 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+
+}
+body{
+    font-family:Arial, Helvetica, sans-serif;
+}
+a{
+    text-decoration: none;
+
+}
+h1{
+    background-color: yellow;
+    color: cornflowerblue;
+    text-align: center;
+    margin: auto;
+
+}
+
+.mark{
+    background-color: olive;
+    color: black;
+    width: 350px;
+    height: 350px;
+    text-align: center;
+    font-size: small;
+    padding: 1%;
+    border:2px solid purple;
+    margin: 2% auto;
+    
+
+}

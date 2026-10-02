@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DOM Selectors</title>
+</head>
+<body>
+
+    <h1 id="heading">Original Heading</h1>
+
+    <p class="para">Hello</p>
+    
+
+    <script>
+        
+        let heading = document.getElementById("heading");
+
+       
+        heading.textContent = "New Heading";
+
+        
+        let Hello = document.querySelectorAll(".para");
+
+        
+        Hello.forEach(function(p, index) {
+            p.textContent = "Hello " + (index + 1);
+        });
+    </script>
+
+</body>
+</html>

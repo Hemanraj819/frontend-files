@@ -1,0 +1,29 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+a{
+    text-decoration: none;
+}
+p::first-letter{
+    font-size: 30px;
+    color:orange;
+   
+}
+
+p::first-line{
+    color: blue;
+}
+
+p::selection{
+    background:red;
+    color: black;
+}

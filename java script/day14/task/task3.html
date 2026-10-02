@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Smooth Card Toggle</title>
+
+    <style>
+        .card {
+            background-color:lightblue;
+            width: 300px;
+            padding: 20px;
+            border: 1px solid gray;
+            border-radius: 10px;
+        }
+
+        .card img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        .details {
+            max-height: 0;
+            overflow: hidden;
+            opacity: 0;
+            transition: max-height 0.5s ease, opacity 0.5s ease;
+        }
+
+        .card.show .details {
+            max-height: 200px;
+            opacity: 1;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="card" class="card">
+
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2g_P830U6bXpHQhEzyP_n5gzNB_XQQgnKa3NfBhBh8wvS2MCqZggyjFw&s=10" alt="Image">
+
+        <h2>My Card</h2>
+
+        <div class="details">
+            <p>
+                This is  my Card
+                I am Raju 
+            </p>
+        </div>
+
+        <button onclick="toggleDetails()">Show Details</button>
+
+    </div>
+
+    <script>
+        function toggleDetails() {
+            let card = document.getElementById("card");
+
+            card.classList.toggle("show");
+        }
+    </script>
+
+</body>
+</html>

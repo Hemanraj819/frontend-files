@@ -1,0 +1,901 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#060608" />
+  <title>PULSE — Bio-Optimized Clean Energy & Nootropics</title>
+  <meta name="description" content="PULSE is the next-generation bio-optimized nootropic energy drink. Zero sugar, zero jitters, sustained 6-hour hyper-focus. Experience the future of human energy." />
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=JetBrains+Mono:wght@500;700;800&family=Space+Grotesk:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="page-noise" aria-hidden="true"></div>
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+  <!-- Navigation Bar -->
+  <header class="nav" id="nav">
+    <a class="brand" href="#home" aria-label="PULSE Home">
+      <span class="brand-mark">P</span>
+      <span>PULSE</span>
+    </a>
+    
+    <nav class="nav-links" aria-label="Primary Navigation">
+      <a href="#products">Lineup</a>
+      <a href="#studio">3D Studio & X-Ray</a>
+      <a href="#simulator">Energy Simulator</a>
+      <a href="#builder">Build 12-Pack</a>
+      <a href="#find">Match Quiz</a>
+      <a href="#investor">Investor Thesis</a>
+    </nav>
+    
+    <div class="nav-actions">
+      <!-- Web Audio Synthesizer Sound Toggle -->
+      <button class="sound-toggle active" id="soundToggle" title="Toggle Procedural Audio Effects" aria-label="Toggle Sound">
+        <div class="sound-bars">
+          <span class="sound-bar"></span>
+          <span class="sound-bar"></span>
+          <span class="sound-bar"></span>
+        </div>
+        <span id="soundLabel">AUDIO ON</span>
+      </button>
+
+      <!-- High-Impact Investor Pitch Room Button -->
+      <button class="investor-nav-btn" id="openInvestorDeckBtn" title="View Investor Pitch Deck & Data Room">
+        <span>✦</span> INVESTOR DECK
+      </button>
+      
+      <!-- Account & Cart Actions -->
+      <button class="nav-icon" id="accountBtn" title="Account & Order History" aria-label="Open account">◯</button>
+      <button class="nav-icon cart-btn" id="cartBtn" title="Shopping Cart" aria-label="Open cart">
+        ◐<span id="cartCount">0</span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <div class="hero-grid" aria-hidden="true"></div>
+      
+      <div class="hero-copy reveal">
+        <div class="eyebrow">
+          <span class="badge badge-pulse">NEXT-GEN NOOTROPIC ENERGY</span>
+        </div>
+        <h1>ENERGY<br><span>FOR WHAT'S NEXT.</span></h1>
+        <p>
+          Zero sugar. Zero crash. Formulated with clinical Cognizin® Citicoline, L-Theanine, and bio-electrolytes for sustained 6-hour alpha-wave focus.
+        </p>
+        
+        <div class="hero-actions">
+          <button class="btn btn-primary" id="heroStartQuizBtn">
+            Find Your PULSE <span>↗</span>
+          </button>
+          <a class="btn btn-ghost" href="#studio">
+            Explore 3D Studio <span>✦</span>
+          </a>
+          <button class="btn btn-purple" id="heroInvestorBtn">
+            Investor Thesis <span>⚡</span>
+          </button>
+        </div>
+
+        <!-- Key Financial & Operational Proof -->
+        <div class="hero-metrics">
+          <div class="hero-metric">
+            <strong>0<span>g</span></strong>
+            <span>Sugar & Crash</span>
+          </div>
+          <div class="hero-metric">
+            <strong>6<span>h</span></strong>
+            <span>Sustained Focus</span>
+          </div>
+          <div class="hero-metric">
+            <strong>82.3<span>%</span></strong>
+            <span>D2C Gross Margin</span>
+          </div>
+          <div class="hero-metric">
+            <strong>120<span>k+</span></strong>
+            <span>Pilot Waitlist</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 3D Hero Can Showcase with Orbitals & Flavor Switcher -->
+      <div class="hero-can-wrap reveal">
+        <div class="can-stage">
+          <div class="can-shadow"></div>
+          
+          <div class="can" id="heroCan">
+            <div class="can-top"></div>
+            <div class="can-body">
+              <div class="can-burst" id="heroCanMark">P</div>
+              <div class="can-name">PULSE</div>
+              <div class="can-flavor" id="heroCanFlavor">FOCUS</div>
+              <div class="can-meta" id="heroCanMeta">CYBER CITRUS / 180MG CAFFEINE</div>
+              <div class="can-wave" id="heroCanWave"></div>
+              <div class="can-small">BIO-NOOTROPIC DRINK</div>
+              <div class="can-frost"></div>
+            </div>
+            <div class="can-bottom"></div>
+          </div>
+
+          <div class="hero-orbit orbit-a"></div>
+          <div class="hero-orbit orbit-b"></div>
+
+          <!-- Dynamic Flavor Pills underneath hero can -->
+          <div class="flavor-pills">
+            <button class="flavor-pill active" data-flavor="focus" style="--pill-color: var(--c-focus); --pill-glow: rgba(216,255,0,0.4);">FOCUS</button>
+            <button class="flavor-pill" data-flavor="overdrive" style="--pill-color: var(--c-overdrive); --pill-glow: rgba(138,125,255,0.4);">OVERDRIVE</button>
+            <button class="flavor-pill" data-flavor="flow" style="--pill-color: var(--c-flow); --pill-glow: rgba(0,255,157,0.4);">FLOW</button>
+            <button class="flavor-pill" data-flavor="reboot" style="--pill-color: var(--c-reboot); --pill-glow: rgba(255,71,87,0.4);">REBOOT</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Continuous Scrolling Marquee Ticker -->
+    <section class="ticker" aria-label="PULSE Highlights">
+      <div class="ticker-track">
+        <span>CLINICALLY PROVEN NOOTROPICS</span><i>✦</i>
+        <span>82.3% GROSS MARGIN</span><i>✦</i>
+        <span>ZERO SUGAR & ZERO CRASH</span><i>✦</i>
+        <span>120,000+ WAITLIST</span><i>✦</i>
+        <span>100% INFINITELY RECYCLABLE</span><i>✦</i>
+        <span>ALPHA BRAIN WAVE ACCELERATION</span><i>✦</i>
+        <span>$86B ENERGY MARKET DISRUPTION</span><i>✦</i>
+        <span>CLINICALLY PROVEN NOOTROPICS</span><i>✦</i>
+        <span>82.3% GROSS MARGIN</span><i>✦</i>
+        <span>ZERO SUGAR & ZERO CRASH</span><i>✦</i>
+      </div>
+    </section>
+
+    <!-- 3D Interactive Can Studio & Formula X-Ray Section -->
+    <section class="section studio-section" id="studio">
+      <div class="section-head reveal">
+        <div>
+          <div class="eyebrow">INTERACTIVE 360° LAB</div>
+          <h2>Explore the Can.<br><span>Dissect the Science.</span></h2>
+        </div>
+        <p>
+          Drag horizontally or use the controls below to rotate 360° in 3D. Spin to inspect the clinical Supplement Facts on the back, or toggle Formula X-Ray to dissect the bio-nootropic stack.
+        </p>
+      </div>
+
+      <div class="studio-grid reveal">
+        <!-- 3D Stage Viewer -->
+        <div class="studio-viewer" id="studioViewer">
+          <div class="studio-toolbar">
+            <div class="badge badge-pulse" id="studioAngleBadge">360° INTERACTIVE 3D (FRONT)</div>
+            <div class="mode-toggles">
+              <button class="mode-btn" id="toggleFrostBtn">❄️ Cold Frost</button>
+              <button class="mode-btn active" id="toggleAutoSpinBtn">↻ Auto-Spin</button>
+              <button class="mode-btn" id="toggleXrayBtn">⚡ Formula X-Ray</button>
+            </div>
+          </div>
+
+          <!-- True 3D Dual-Face Interactive Can Stage -->
+          <div class="can-3d-stage" id="can3dStage" title="Click and drag horizontally to spin the can in 3D">
+            <div class="can-shadow"></div>
+            
+            <div class="studio-can-wrapper" id="studioCan">
+              <!-- FRONT FACE -->
+              <div class="can-face can-front">
+                <div class="can-top"></div>
+                <div class="can-body" id="studioCanBody">
+                  <div class="can-burst" id="studioCanMark">P</div>
+                  <div class="can-name">PULSE</div>
+                  <div class="can-flavor" id="studioCanFlavor">FOCUS</div>
+                  <div class="can-meta" id="studioCanMeta">CYBER CITRUS / 180MG CAFFEINE</div>
+                  <div class="can-wave" id="studioCanWave"></div>
+                  <div class="can-small">BIO-NOOTROPIC DRINK</div>
+                  <div class="can-frost"></div>
+
+                  <!-- Hotspot X-Ray Pins Anchored to Can Front -->
+                  <div class="xray-pins" id="xrayPins">
+                    <div class="xray-pin" style="top: 26%; left: 16%;" data-pin="1">
+                      <span>1</span>
+                      <div class="pin-tooltip">
+                        <strong>Cognizin® Citicoline (250mg)</strong>
+                        Clinically proven to increase brain ATP cellular energy by 34% and accelerate focus.
+                      </div>
+                    </div>
+                    <div class="xray-pin" style="top: 42%; right: 16%;" data-pin="2">
+                      <span>2</span>
+                      <div class="pin-tooltip">
+                        <strong>L-Theanine + Natural Caffeine (2:1)</strong>
+                        Calm, jitter-free alertness that neutralizes tachycardia and anxiety.
+                      </div>
+                    </div>
+                    <div class="xray-pin" style="top: 60%; left: 20%;" data-pin="3">
+                      <span>3</span>
+                      <div class="pin-tooltip">
+                        <strong>Alpha-GPC & Huperzine-A</strong>
+                        Amplifies acetylcholine synthesis for instantaneous memory and reaction time.
+                      </div>
+                    </div>
+                    <div class="xray-pin" style="top: 75%; right: 18%;" data-pin="4">
+                      <span>4</span>
+                      <div class="pin-tooltip">
+                        <strong>Himalayan Pink Salt & Electrolytes</strong>
+                        Rapid cellular hydration and electrical neural impulse signaling.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="can-bottom"></div>
+              </div>
+
+              <!-- BACK FACE (Supplement Facts & Barcode) -->
+              <div class="can-face can-back">
+                <div class="can-top"></div>
+                <div class="can-body can-back-body">
+                  <div class="facts-panel">
+                    <div class="facts-title">Supplement Facts</div>
+                    <div class="facts-servings">Serving Size: 1 Can (355ml / 12 fl oz)</div>
+                    <div class="facts-divider thick"></div>
+                    <div class="facts-row"><span>Calories</span><strong>5</strong></div>
+                    <div class="facts-divider"></div>
+                    <div class="facts-row"><span>Total Carbohydrate</span><strong>0g (0% DV)</strong></div>
+                    <div class="facts-row"><span>Total Sugars</span><strong>0g</strong></div>
+                    <div class="facts-divider"></div>
+                    <div class="facts-section-hdr">PULSE BIO-STACK™</div>
+                    <div class="facts-row"><span id="factsStackName">Cognizin® Citicoline</span><strong>250 mg</strong></div>
+                    <div class="facts-row"><span>L-Theanine (Suntheanine)</span><strong>200 mg</strong></div>
+                    <div class="facts-row"><span id="factsCaffeine">Natural Caffeine (Green Tea)</span><strong>180 mg</strong></div>
+                    <div class="facts-row"><span>Alpha-GPC 99%</span><strong>150 mg</strong></div>
+                    <div class="facts-row"><span>Himalayan Pink Salt</span><strong>180 mg</strong></div>
+                    <div class="facts-divider"></div>
+                    <div class="facts-barcode">
+                      <div class="barcode-lines"></div>
+                      <span>0 84920 18274 6</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="can-bottom"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Studio Quick Controls Toolbar -->
+          <div class="studio-bottom-controls">
+            <div class="angle-buttons">
+              <button class="angle-btn" id="btnAngleLeft" title="Turn Left 45°">◀ Turn Left</button>
+              <button class="angle-btn" id="btnAngleFront" title="Show Front">Front (0°)</button>
+              <button class="angle-btn" id="btnAngleBack" title="Show Nutrition Facts">Back (180°)</button>
+              <button class="angle-btn" id="btnAngleRight" title="Turn Right 45°">Turn Right ▶</button>
+            </div>
+            <div class="studio-slider-row">
+              <span style="font-size: 10px; color: var(--text-muted); font-family: var(--font-mono); letter-spacing: 0.1em;">ROTATION:</span>
+              <input type="range" id="studioAngleSlider" class="range-slider" min="0" max="360" value="0" style="flex: 1;" />
+              <span id="studioAngleValue" style="font-family: var(--font-mono); font-size: 12px; color: var(--accent); min-width: 40px; text-align: right;">0°</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Studio Specification & Purchase Card -->
+        <div class="studio-spec">
+          <!-- Direct Flavor Selector Buttons in Studio -->
+          <div class="studio-flavor-selector">
+            <span class="studio-flv-label">CHOOSE FORMULA:</span>
+            <div class="studio-flv-buttons">
+              <button class="studio-flv-btn active" data-studio-flavor="focus" style="--btn-c: var(--c-focus);">
+                <span class="flv-dot"></span> FOCUS
+              </button>
+              <button class="studio-flv-btn" data-studio-flavor="overdrive" style="--btn-c: var(--c-overdrive);">
+                <span class="flv-dot"></span> OVERDRIVE
+              </button>
+              <button class="studio-flv-btn" data-studio-flavor="flow" style="--btn-c: var(--c-flow);">
+                <span class="flv-dot"></span> FLOW
+              </button>
+              <button class="studio-flv-btn" data-studio-flavor="reboot" style="--btn-c: var(--c-reboot);">
+                <span class="flv-dot"></span> REBOOT
+              </button>
+            </div>
+          </div>
+
+          <div class="spec-header">
+            <div class="eyebrow" id="studioEyebrow">FORMULA 01 — FOCUS</div>
+            <h3 id="studioTitle">Cyber Citrus</h3>
+            <p class="spec-subtitle" id="studioDesc">
+              Crisp Japanese yuzu blended with California lime. Formulated for high-intensity engineering, deep problem solving, and gaming endurance.
+            </p>
+          </div>
+
+          <div class="spec-attributes">
+            <div class="spec-card">
+              <span>ACTIVE BIO-STACK</span>
+              <strong id="studioStack">Cognizin + Theanine</strong>
+            </div>
+            <div class="spec-card">
+              <span>NATURAL CAFFEINE</span>
+              <strong id="studioCaffeine">180 mg</strong>
+            </div>
+            <div class="spec-card">
+              <span>SUGAR & CALORIES</span>
+              <strong>0g Sugar / 5 Cal</strong>
+            </div>
+            <div class="spec-card">
+              <span>ALPHA-WAVE PEAK</span>
+              <strong>6.4 Hours</strong>
+            </div>
+          </div>
+
+          <div class="studio-actions">
+            <div class="price" id="studioPrice">$3.50 <span>/ can</span></div>
+            <button class="btn btn-primary" id="studioAddToCartBtn">
+              Add to Cart <span>+</span>
+            </button>
+            <button class="btn btn-ghost" id="studioBuildPackBtn">
+              Add to 12-Pack Box <span>↗</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Energy Curve & Crash Simulator -->
+    <section class="section simulator-section" id="simulator">
+      <div class="section-head reveal">
+        <div>
+          <div class="eyebrow">CLINICAL PHARMACOKINETICS</div>
+          <h2>The Science<br><span>Behind the Curve.</span></h2>
+        </div>
+        <p>
+          Traditional energy drinks trigger a massive glucose spike and abrupt adenosine crash. Drag the timeline scrubber below to analyze real-time alertness and jitter comparisons over 8 hours.
+        </p>
+      </div>
+
+      <div class="sim-container reveal">
+        <!-- Interactive Canvas Chart -->
+        <div class="sim-chart-wrap">
+          <canvas id="energyCanvas"></canvas>
+        </div>
+
+        <div class="sim-controls">
+          <div class="sim-slider-group">
+            <label for="hourSlider">
+              <span>ELAPSED METABOLIC TIMELINE:</span>
+              <strong id="hourDisplay">Hour 3.0</strong>
+            </label>
+            <input type="range" id="hourSlider" class="range-slider" min="0" max="8" step="0.1" value="3.0" />
+            <div style="display: flex; justify-content: space-between; font-size: 10px; color: var(--text-muted); margin-top: 8px;">
+              <span>0h (Ingestion)</span>
+              <span>2h (Peak Glucose Drop)</span>
+              <span>4h (Sustained Nootropic State)</span>
+              <span>6h (Smooth Taper)</span>
+              <span>8h (Baseline Rest)</span>
+            </div>
+          </div>
+
+          <!-- Real-Time Telemetry Gauges -->
+          <div class="sim-telemetry">
+            <div class="telemetry-card good">
+              <span>PULSE COGNITIVE FOCUS</span>
+              <strong id="pulseFocusMeter">94%</strong>
+            </div>
+            <div class="telemetry-card danger">
+              <span>SUGAR DRINK CRASH LEVEL</span>
+              <strong id="sugarCrashMeter">88%</strong>
+            </div>
+            <div class="telemetry-card">
+              <span>PULSE JITTER INDEX</span>
+              <strong id="jitterMeter" style="color: var(--c-flow);">4% (Calm)</strong>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Product Lineup Section -->
+    <section class="section products-section" id="products">
+      <div class="section-head reveal">
+        <div>
+          <div class="eyebrow">THE 4 BIO-OPTIMIZED SKUS</div>
+          <h2>Engineered for<br><span>every challenge.</span></h2>
+        </div>
+        <p>
+          Four targeted formulas. Zero artificial dyes. 100% naturally sweetened with organic monk fruit and stevia leaf.
+        </p>
+      </div>
+
+      <div class="product-grid" id="productGrid">
+        <!-- Cards generated dynamically via app.js -->
+      </div>
+    </section>
+
+    <!-- Custom 12-Pack "Variety Crate" Builder -->
+    <section class="section builder-section" id="builder">
+      <div class="section-head reveal">
+        <div>
+          <div class="eyebrow">CUSTOM PACK ARCHITECT</div>
+          <h2>Build Your Own<br><span>12-Pack Crate.</span></h2>
+        </div>
+        <p>
+          Mix and match any combination of formulas. Fill all 12 slots to lock in $8 bundle savings and unlock free express shipping!
+        </p>
+      </div>
+
+      <div class="builder-layout reveal">
+        <!-- 12-Slot Visual Crate -->
+        <div class="crate-container">
+          <div class="crate-topline">
+            <span class="badge badge-pulse">CRATE MATRIX (12 CANS)</span>
+            <div class="crate-status" id="crateStatusText">0 / 12 SLOTS FILLED</div>
+          </div>
+
+          <div class="crate-grid" id="crateGrid">
+            <!-- 12 slots rendered dynamically -->
+          </div>
+        </div>
+
+        <!-- Flavor Steppers & Box Summary -->
+        <div class="builder-controls">
+          <div class="flavor-counter-row" style="--flavor-dot-color: var(--c-focus);">
+            <div class="fcr-meta">
+              <div class="fcr-dot"></div>
+              <div class="fcr-text">
+                <strong>FOCUS (Cyber Citrus)</strong>
+                <span>180mg Natural Caffeine + Cognizin</span>
+              </div>
+            </div>
+            <div class="fcr-stepper">
+              <button class="step-btn" data-flavor="focus" data-delta="-1">-</button>
+              <span class="step-count" id="count-focus">0</span>
+              <button class="step-btn" data-flavor="focus" data-delta="1">+</button>
+            </div>
+          </div>
+
+          <div class="flavor-counter-row" style="--flavor-dot-color: var(--c-overdrive);">
+            <div class="fcr-meta">
+              <div class="fcr-dot"></div>
+              <div class="fcr-text">
+                <strong>OVERDRIVE (Ghost Blackberry)</strong>
+                <span>200mg Caffeine + Cordyceps</span>
+              </div>
+            </div>
+            <div class="fcr-stepper">
+              <button class="step-btn" data-flavor="overdrive" data-delta="-1">-</button>
+              <span class="step-count" id="count-overdrive">0</span>
+              <button class="step-btn" data-flavor="overdrive" data-delta="1">+</button>
+            </div>
+          </div>
+
+          <div class="flavor-counter-row" style="--flavor-dot-color: var(--c-flow);">
+            <div class="fcr-meta">
+              <div class="fcr-dot"></div>
+              <div class="fcr-text">
+                <strong>FLOW (Zen Matcha)</strong>
+                <span>120mg Caffeine + 240mg L-Theanine</span>
+              </div>
+            </div>
+            <div class="fcr-stepper">
+              <button class="step-btn" data-flavor="flow" data-delta="-1">-</button>
+              <span class="step-count" id="count-flow">0</span>
+              <button class="step-btn" data-flavor="flow" data-delta="1">+</button>
+            </div>
+          </div>
+
+          <div class="flavor-counter-row" style="--flavor-dot-color: var(--c-reboot);">
+            <div class="fcr-meta">
+              <div class="fcr-dot"></div>
+              <div class="fcr-text">
+                <strong>REBOOT (Blood Orange)</strong>
+                <span>150mg Caffeine + Himalayan Electrolytes</span>
+              </div>
+            </div>
+            <div class="fcr-stepper">
+              <button class="step-btn" data-flavor="reboot" data-delta="-1">-</button>
+              <span class="step-count" id="count-reboot">0</span>
+              <button class="step-btn" data-flavor="reboot" data-delta="1">+</button>
+            </div>
+          </div>
+
+          <!-- Builder Summary & Add to Cart -->
+          <div class="builder-summary">
+            <div class="bs-row">
+              <span>Standard Retail (12 cans × $3.50)</span>
+              <span>$42.00</span>
+            </div>
+            <div class="bs-row" style="color: var(--accent);">
+              <span>Custom Bundle Discount</span>
+              <span>-$8.00</span>
+            </div>
+            <div class="bs-row total">
+              <span>Bundle Total</span>
+              <span id="crateTotalPrice">$34.00</span>
+            </div>
+            <button class="btn btn-primary" id="addCustomPackBtn" style="width: 100%;" disabled>
+              Fill 12 Slots to Add Crate
+            </button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INVESTOR THESIS & PITCH ROOM -->
+    <section class="section investor-section" id="investor">
+      <div class="investor-banner reveal">
+        <div class="eyebrow">
+          <span class="badge badge-pulse">VENTURE & CAPITAL THESIS</span>
+        </div>
+        <h2>WHY INVEST<br><span>IN PULSE?</span></h2>
+        <p style="max-width: 680px; color: var(--text-dim); margin-top: 14px; font-size: 16px;">
+          The global energy drink market is an $86 Billion behemoth undergoing its largest disruption in 30 years: modern consumers are abandoning sugar-loaded, jittery legacy cans for clean, functional nootropics.
+        </p>
+
+        <!-- 4 Investment Pillars -->
+        <div class="investor-grid">
+          <div class="investor-card">
+            <div class="inv-num">01 / MARKET EXPANSION</div>
+            <h4>$86B TAM Shift</h4>
+            <p>
+              Functional & cognitive beverages are growing at 12.8% CAGR, rapidly taking market share from legacy brands.
+            </p>
+            <div class="investor-metric-highlight">
+              <strong>12.8%</strong>
+              <span>Category CAGR</span>
+            </div>
+          </div>
+
+          <div class="investor-card">
+            <div class="inv-num">02 / PROPRIETARY MOAT</div>
+            <h4>Bio-Stack IP</h4>
+            <p>
+              Patent-pending micro-encapsulation eliminates active nootropic bitterness with 0g sugar and 24-month shelf stability.
+            </p>
+            <div class="investor-metric-highlight">
+              <strong>02</strong>
+              <span>Patents Pending</span>
+            </div>
+          </div>
+
+          <div class="investor-card">
+            <div class="inv-num">03 / UNRIVALED MARGINS</div>
+            <h4>82.3% D2C Margin</h4>
+            <p>
+              COGS at $0.62 per can vs. $3.50 retail yields software-like gross margins and a payback period of under 2.1 orders.
+            </p>
+            <div class="investor-metric-highlight">
+              <strong>$48.50</strong>
+              <span>Average Order Value</span>
+            </div>
+          </div>
+
+          <div class="investor-card">
+            <div class="inv-num">04 / TRACTION & RETENTION</div>
+            <h4>64% 90-Day Retention</h4>
+            <p>
+              Viral organic traction with over 120,000 waitlist signups and a 3.4x LTV:CAC efficiency ratio.
+            </p>
+            <div class="investor-metric-highlight">
+              <strong>3.4x</strong>
+              <span>LTV to CAC Ratio</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Interactive Investor ROI & Valuation Calculator -->
+        <div class="roi-calculator">
+          <div class="roi-head">
+            <div>
+              <h4>Interactive Financial Projection Model</h4>
+              <span style="font-size: 12px; color: var(--text-muted);">Adjust subscriber scale to calculate projected ARR, Gross Margin, and Enterprise Valuation.</span>
+            </div>
+            <button class="btn btn-sm btn-ghost" id="openDeckModalBtn">Open Full Pitch Deck ↗</button>
+          </div>
+
+          <div class="roi-grid">
+            <div class="roi-inputs">
+              <div>
+                <label style="display: flex; justify-content: space-between; font-size: 13px; font-weight: 700; margin-bottom: 8px;">
+                  <span>Active Monthly Subscribers:</span>
+                  <strong id="subscribersCountDisplay" style="color: var(--accent); font-family: var(--font-mono);">35,000</strong>
+                </label>
+                <input type="range" id="subscribersSlider" class="range-slider" min="5000" max="150000" step="2500" value="35000" />
+              </div>
+              <div style="font-size: 11px; color: var(--text-muted);">
+                Assumes $48.50 monthly recurring bundle per subscriber, 82.3% D2C blended margin, and standard consumer brand 8.0x ARR valuation multiple.
+              </div>
+            </div>
+
+            <div class="roi-outputs">
+              <div class="roi-output-box">
+                <span>PROJECTED ARR</span>
+                <strong id="calcArrDisplay">$20.3M</strong>
+              </div>
+              <div class="roi-output-box">
+                <span>NET GROSS PROFIT</span>
+                <strong id="calcGrossDisplay">$16.7M</strong>
+              </div>
+              <div class="roi-output-box" style="grid-column: 1 / -1; border-top: 1px solid var(--line); padding-top: 12px;">
+                <span>PROJECTED ENTERPRISE VALUATION (8x ARR)</span>
+                <strong id="calcValuationDisplay" style="font-size: 32px; color: var(--c-flow);">$162.9M</strong>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- PULSE Match Diagnostic Section -->
+    <section class="find-section" id="find">
+      <div class="find-orb" id="findOrb"></div>
+      
+      <div class="find-content reveal">
+        <div class="eyebrow">AI BIO-DIAGNOSTIC ENGINE</div>
+        <h2>WHAT ARE<br><span>YOU HERE FOR?</span></h2>
+        <p>
+          Take our 30-second formula diagnostic. We assess your circadian rhythm, caffeine sensitivity, and cognitive demands to match your optimal PULSE formula.
+        </p>
+        <button class="btn btn-primary" id="startQuiz">
+          Start Diagnostic Match <span>→</span>
+        </button>
+      </div>
+      
+      <div class="find-side reveal">
+        <div class="score-ring" id="scoreRing"><span>∞</span></div>
+        <div class="score-label">YOUR NEXT<br><strong>IS WAITING.</strong></div>
+      </div>
+    </section>
+
+    <!-- Story & Sustainability Proof Section -->
+    <section class="section story-section" id="story">
+      <div class="story-panel reveal">
+        <div>
+          <div class="eyebrow">THE FOUNDING THESIS</div>
+          <h2>Not another<br><span>sugar drink.</span></h2>
+        </div>
+        <div class="story-copy">
+          <p>
+            Traditional brands pack 30g of toxic sugars, chemical taurine, and artificial red dyes into loud cans. 
+            <em>PULSE was born in a biomedical lab</em> to solve cognitive fatigue for software engineers, founders, and athletes who demand peak mental clarity without the 3 PM burnout.
+          </p>
+          <div class="mini-stats">
+            <div>
+              <strong>04</strong>
+              <span>Clinically Tuned<br>Formulas</span>
+            </div>
+            <div>
+              <strong>100%</strong>
+              <span>Infinitely Recyclable<br>Aluminum</span>
+            </div>
+            <div>
+              <strong>0g</strong>
+              <span>Sugar, Dyes &<br>Crash</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="section cta-section reveal">
+      <div class="cta-card">
+        <div class="eyebrow">READY TO TRANSCEND?</div>
+        <h2>CLAIM YOUR<br><span>FIRST PACK.</span></h2>
+        <p style="color: var(--text-dim); max-width: 480px; margin-top: 14px;">
+          Join over 120,000 high-performers. Use code <code style="color: var(--accent); font-family: var(--font-mono);">PULSE20</code> for 20% off your first 12-pack crate.
+        </p>
+        <button class="btn btn-primary" id="ctaMatchBtn">
+          Take the 30-Second Match <span>→</span>
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div>
+      <div class="brand">
+        <span class="brand-mark">P</span>
+        <span>PULSE</span>
+      </div>
+      <p style="margin-top: 12px; max-width: 320px;">
+        Energy engineered for what's next. Clinically validated nootropic beverage company.
+      </p>
+    </div>
+    
+    <div class="footer-links">
+      <strong style="color: #fff; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;">Product Lab</strong>
+      <a href="#products">Product Lineup</a>
+      <a href="#studio">3D Flavor Studio</a>
+      <a href="#simulator">Energy Simulator</a>
+      <a href="#builder">Build 12-Pack</a>
+    </div>
+
+    <div class="footer-links">
+      <strong style="color: #fff; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase;">Investors & Press</strong>
+      <a href="#investor" id="footerInvestorLink">Investor Deck</a>
+      <a href="mailto:invest@pulseenergy.co">Investor Relations (invest@pulseenergy.co)</a>
+      <a href="#story">Clinical Whitepaper</a>
+      <a href="#home">Privacy & Terms</a>
+    </div>
+
+    <small>
+      <span>© <span id="year"></span> PULSE Energy Inc. All rights reserved.</span>
+      <span>Engineered with Firebase Modular v11 SDK</span>
+    </small>
+  </footer>
+
+  <!-- ===== MODALS ===== -->
+
+  <!-- 1. PULSE Match Quiz Modal -->
+  <div class="modal-backdrop" id="quizModal">
+    <div class="modal quiz-modal">
+      <button class="modal-close" data-close="quizModal">×</button>
+      <div class="quiz-progress"><span id="quizProgressFill"></span></div>
+      <div id="quizContent">
+        <!-- Injected dynamically via app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- 2. Investor Pitch Deck Modal / Data Room -->
+  <div class="modal-backdrop" id="investorModal">
+    <div class="modal deck-modal">
+      <button class="modal-close" data-close="investorModal">×</button>
+      
+      <div class="deck-head" style="margin-bottom: 20px;">
+        <div class="eyebrow">CONFIDENTIAL INVESTOR PITCH DECK</div>
+        <h2>PULSE ENERGY INC. <span>SEED & SERIES A</span></h2>
+      </div>
+
+      <div class="deck-tabs" id="deckTabs">
+        <button class="deck-tab active" data-tab="problem">1. The Problem</button>
+        <button class="deck-tab" data-tab="solution">2. The Solution</button>
+        <button class="deck-tab" data-tab="battlecard">3. Competitor Battlecard</button>
+        <button class="deck-tab" data-tab="economics">4. Unit Economics</button>
+        <button class="deck-tab" data-tab="ask">5. The Ask & Allocation</button>
+      </div>
+
+      <div class="deck-content" id="deckContent">
+        <!-- Rendered via app.js -->
+      </div>
+
+      <div style="margin-top: 24px; padding-top: 18px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; align-items: center;">
+        <span style="font-size: 11px; color: var(--text-muted);">Confidential • Seed Round • Lead: Founders Fund / Angel Syndicate</span>
+        <button class="btn btn-primary btn-sm" id="downloadDeckBtn">Download Pitch Brief (JSON/PDF)</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 3. Account / Authentication Modal -->
+  <div class="modal-backdrop" id="accountModal">
+    <div class="modal account-modal" style="max-width: 480px;">
+      <button class="modal-close" data-close="accountModal">×</button>
+      <div class="eyebrow">PULSE IDENTITY</div>
+      <h3 style="font-family: var(--font-display); font-size: 38px; margin-bottom: 8px;">
+        Your Account &<br><span>Orders.</span>
+      </h3>
+      <p style="color: var(--text-dim); font-size: 13px; margin-bottom: 20px;">
+        Connected to Firebase Auth with automatic local demo fallback.
+      </p>
+
+      <div id="authPanel">
+        <form id="authForm" style="display: flex; flex-direction: column; gap: 12px;">
+          <input type="email" id="email" placeholder="Email address" required style="background: #15151e; border: 1px solid var(--line); border-radius: 12px; padding: 14px; color: #fff;" />
+          <input type="password" id="password" placeholder="Password (min 6 chars)" minlength="6" required style="background: #15151e; border: 1px solid var(--line); border-radius: 12px; padding: 14px; color: #fff;" />
+          <div style="display: flex; gap: 10px; margin-top: 8px;">
+            <button class="btn btn-primary" type="submit" style="flex: 1;" id="authSubmitBtn">Login / Register</button>
+            <button class="btn btn-ghost" type="button" id="demoUserBtn">Demo Guest</button>
+          </div>
+        </form>
+        <div id="authStatus" style="margin-top: 12px; font-size: 12px; color: var(--accent);"></div>
+      </div>
+
+      <!-- Past Orders List (Shown when logged in) -->
+      <div id="userOrdersPanel" style="display: none; margin-top: 24px; padding-top: 20px; border-top: 1px solid var(--line);">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 14px;">
+          <strong style="font-size: 14px;">Your Orders</strong>
+          <button class="btn btn-sm btn-ghost" id="logoutBtn">Log Out</button>
+        </div>
+        <div id="ordersList" style="font-size: 12px; color: var(--text-dim); max-height: 180px; overflow-y: auto;">
+          No previous orders found.
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- 4. Simulated Checkout & Receipt Modal -->
+  <div class="modal-backdrop" id="checkoutModal">
+    <div class="modal" style="max-width: 520px;">
+      <button class="modal-close" data-close="checkoutModal">×</button>
+      <div class="eyebrow">ORDER CONFIRMATION</div>
+      <h3 style="font-family: var(--font-display); font-size: 34px; margin-bottom: 8px;">
+        Pulse Dispatched.<br><span>You're Charged.</span>
+      </h3>
+      <p style="color: var(--text-dim); font-size: 13px; margin-bottom: 20px;">
+        Your bio-optimized fuel is being prepared at our carbon-neutral bottling facility.
+      </p>
+
+      <div style="background: #15151e; border: 1px solid var(--line-strong); border-radius: 16px; padding: 20px; margin-bottom: 20px;">
+        <div style="display: flex; justify-content: space-between; font-family: var(--font-mono); font-size: 12px; margin-bottom: 10px;">
+          <span style="color: var(--text-muted);">ORDER ID:</span>
+          <strong id="receiptOrderId" style="color: var(--accent);">ORD-849201</strong>
+        </div>
+        <div style="display: flex; justify-content: space-between; font-size: 12px; margin-bottom: 8px;">
+          <span style="color: var(--text-dim);">ESTIMATED DELIVERY:</span>
+          <strong id="receiptDelivery">2 Business Days (Express)</strong>
+        </div>
+        <div style="display: flex; justify-content: space-between; font-size: 14px; font-weight: 800; border-top: 1px solid var(--line); padding-top: 10px; margin-top: 10px;">
+          <span>TOTAL CHARGED:</span>
+          <strong id="receiptTotal" style="color: var(--accent); font-family: var(--font-mono);">$34.00</strong>
+        </div>
+      </div>
+
+      <div style="display: flex; gap: 10px;">
+        <button class="btn btn-primary" style="flex: 1;" onclick="document.getElementById('checkoutModal').classList.remove('open')">
+          Track Delivery <span>↗</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 5. Slide-Out Cart Drawer -->
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping Cart">
+    <div class="drawer-head">
+      <h3>Your PULSE</h3>
+      <button class="modal-close" id="closeCart">×</button>
+    </div>
+
+    <!-- Free shipping progress bar -->
+    <div class="shipping-bar-wrap">
+      <div class="shipping-bar-text" id="shippingBarText">
+        Add <strong>$16.00</strong> more to unlock <strong>FREE Express Shipping!</strong>
+      </div>
+      <div class="shipping-bar">
+        <span id="shippingBarFill" style="width: 68%;"></span>
+      </div>
+    </div>
+
+    <!-- Cart items container -->
+    <div id="cartItems" class="cart-items">
+      <!-- Items dynamically populated via app.js -->
+    </div>
+
+    <!-- Drawer Footer -->
+    <div class="drawer-foot">
+      <div class="coupon-row">
+        <input type="text" id="couponInput" placeholder="Promo code (try PULSE20)" />
+        <button class="btn btn-sm btn-ghost" id="applyCouponBtn">Apply</button>
+      </div>
+
+      <div class="drawer-summary">
+        <div style="display: flex; justify-content: space-between;">
+          <span>Subtotal</span>
+          <span id="cartSubtotal" style="font-family: var(--font-mono);">$0.00</span>
+        </div>
+        <div style="display: flex; justify-content: space-between; color: var(--accent);" id="discountRow">
+          <span>Discount</span>
+          <span id="cartDiscount" style="font-family: var(--font-mono);">-$0.00</span>
+        </div>
+        <div style="display: flex; justify-content: space-between;">
+          <span>Shipping</span>
+          <span id="cartShipping" style="font-family: var(--font-mono);">$4.99</span>
+        </div>
+        <div class="total-row">
+          <span>Total</span>
+          <strong id="cartTotal">$0.00</strong>
+        </div>
+      </div>
+
+      <button class="btn btn-primary" id="checkoutBtn" style="width: 100%;">
+        Complete Order <span>→</span>
+      </button>
+    </div>
+  </aside>
+  <div class="drawer-overlay" id="drawerOverlay"></div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Scripts -->
+  <script type="module" src="app.js"></script>
+</body>
+</html>
