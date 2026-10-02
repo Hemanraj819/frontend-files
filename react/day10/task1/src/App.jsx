@@ -15,14 +15,6 @@ const App = () => {
     e.preventDefault()
     
     console.log(savedata);
-    
-
-
-
-    
-
-
-
 
   }
 
