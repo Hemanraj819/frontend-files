@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    width: auto;
+     
+}
+a{
+    text-decoration: none;
+    padding: 20px;
+}
+.logo{
+    width: 200px;
+}
+h2,h3{
+    padding: 10px;
+}
+button{
+    margin: 10px;
+}
+.top{
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ background-color: yellow;
+}
