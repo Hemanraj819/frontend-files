@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    .box {
+      width: 200px;
+      padding: 20px;
+      margin: 20px;
+      border: 2px solid black;
+    }
+
+    .box1 {
+      position: static;
+    }
+
+    .box2 {
+      position: relative;
+      top: 20px;
+      left: 30px;
+    }
+
+    .box3 {
+      position: absolute;
+      top: 300px;
+      left: 300px;
+    }
+
+    .box4 {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+    }
+
+    .box5 {
+      position: sticky;
+      top: 0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="box box1">
+    <h3>Box 1</h3>
+    <p>Static Position</p>
+  </div>
+
+  <div class="box box2">
+    <h3>Box 2</h3>
+    <p>Relative Position</p>
+  </div>
+
+  <div class="box box3">
+    <h3>Box 3</h3>
+    <p>Absolute Position</p>
+  </div>
+
+  <div class="box box4">
+    <h3>Box 4</h3>
+    <p>Fixed Position</p>
+  </div>
+
+  <div class="box box5">
+    <h3>Box 5</h3>
+    <p>Sticky Position</p>
+  </div>
+
+  <div style="height: 1200px;">
+    <h2>Scroll to compare positions</h2>
+  </div>
+
+</body>
+</html>
